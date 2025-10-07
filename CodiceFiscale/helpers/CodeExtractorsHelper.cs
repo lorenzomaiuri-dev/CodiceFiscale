@@ -58,7 +58,7 @@ public static class CodeExtractorsHelper
         try
         {
             // Parse the date
-            DateTime parsedDate = DateTime.ParseExact(dateString, formats, CultureInfo.InvariantCulture);
+            DateTime parsedDate = DateTime.ParseExact(dateString, formats, CultureInfo.InvariantCulture, DateTimeStyles.None);
             return parsedDate.ToUniversalTime();
         }
         catch (FormatException)
