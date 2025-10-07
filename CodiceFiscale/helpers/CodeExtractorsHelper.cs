@@ -24,7 +24,7 @@ public static class CodeExtractorsHelper
     }
 
     // Method to get a date from string or datetime
-    public static DateTime? ExtractDate(object date, string separator = "-")
+    public static DateTime? ExtractDate(object? date, string separator = "-")
     {
         if (date == null)
         {
@@ -36,8 +36,8 @@ public static class CodeExtractorsHelper
             return ((DateTime)date).ToUniversalTime();
         }
 
-        var dateString = date.ToString();
-        var dateSlug = StringsHelper.Slugify(dateString);
+        string dateString = date.ToString();
+        string dateSlug = StringsHelper.Slugify(dateString);
 
         // Split the date
         var dateParts = dateSlug.Split(separator.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
@@ -68,14 +68,14 @@ public static class CodeExtractorsHelper
     }
 
     // Method to find the birthplace
-    public static List<Dictionary<string, object>> ExtractBirthplace(string birthplace, object birthdate = null)
+    public static List<Dictionary<string, object>>? ExtractBirthplace(string birthplace, object? birthdate = null)
     {
         // slugify the birthplace
         var tmpBirthplaceSlug = StringsHelper.Slugify(birthplace);
 
         // if it's a alphanumeric code it must be uppercase, if it's a place name it must be lowercase
         var birthplaceSlug = (StringsHelper.IsAlphaNumeric(tmpBirthplaceSlug)) ? tmpBirthplaceSlug.ToUpper() : tmpBirthplaceSlug.ToLower();
-        List<Dictionary<string, object>> birthplacesOptions = null;
+        List<Dictionary<string, object>>? birthplacesOptions = null;
 
         // Check if the slug of the birthplace is in the data
         if (DataHelper.INDEXED_DATA["municipalities"].ContainsKey(birthplaceSlug))

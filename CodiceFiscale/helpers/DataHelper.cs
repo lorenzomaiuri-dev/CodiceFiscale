@@ -20,7 +20,12 @@ public static class DataHelper
    	{
 		string filePath = Path.Combine(GetDataBaseDir(), "data", filename);
 		string jsonContent = File.ReadAllText(filePath);
-		return JsonSerializer.Deserialize<T>(jsonContent);
+		T? serializedData = JsonSerializer.Deserialize<T>(jsonContent);
+		if (serializedData == null)
+		{
+			throw new InvalidOperationException($"Failed to deserialize JSON file: {filename}");
+		}
+		return serializedData;
 	}
 
    	// Returns municipalities data (municipalities.json)

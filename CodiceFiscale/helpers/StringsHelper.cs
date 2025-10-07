@@ -15,6 +15,10 @@ public static class StringsHelper
     // Method to slugify a string
     public static string Slugify(string input)
     {
+        if (input == null)
+        {
+            return "";
+        }
         return Regex.Replace(input.ToLower(), @"\s+", "-");
     }
 }
