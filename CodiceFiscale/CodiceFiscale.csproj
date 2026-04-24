@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>CodiceFiscale</PackageId>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>Lorenzo Maiuri</Authors>
     <Description>
         A comprehensive library for handling the Italian Tax Code (Codice Fiscale). This package allows encoding, decoding, and validation of Codice Fiscale, including support for omocode resolution. Ideal for developers working with Italian identification systems and tax code management.
