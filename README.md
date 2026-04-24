@@ -94,7 +94,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 Please ensure all pull requests pass the existing tests and include new tests for any added functionality
 
 ## License
-This project is licensed under the GPL-3.0 License. See the LICENSE file for more details
+This project is licensed under the MIT License. See the LICENSE file for more details
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
@@ -105,7 +105,7 @@ Special thanks to all contributors and resources that made this project possible
 [stars-shield]: https://img.shields.io/github/stars/lorenzomaiuri-dev/Reactive-Architecture?style=social
 [stars-url]: https://github.com/lorenzomaiuri-dev/Reactive-Architecture/stargazers
 [license-shield]: https://img.shields.io/badge/License-GPL%20v3-blue.svg
-[license-url]: https://www.gnu.org/licenses/gpl-3.0.html
+[license-url]: https://mit-license.org/license.txt
 [nuget-badge]: https://img.shields.io/nuget/v/CodiceFiscale.svg
 [nuget-url]: https://www.nuget.org/packages/CodiceFiscale/
 [build-badge]: https://img.shields.io/github/actions/workflow/status/lorenzomaiuri-dev/CodiceFiscale/dotnet.yml?branch=main
