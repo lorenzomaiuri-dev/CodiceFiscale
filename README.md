@@ -50,8 +50,7 @@ Here’s a few examples of how to use the library:
 ```csharp
 using CodiceFiscaleLib.Helpers;
 
-string result = 
-.Encode("Rossi", "Mario", 'M', new DateTime (1980, 5, 20), "Milano");
+string result = EncodingHelper.Encode("Rossi", "Mario", 'M', new DateTime (1980, 5, 20), "Milano");
 
 Console.WriteLine($"Generated Codice Fiscale: {result}");
 ```
@@ -104,7 +103,7 @@ Special thanks to all contributors and resources that made this project possible
 <!-- LINKS & IMAGES -->
 [stars-shield]: https://img.shields.io/github/stars/lorenzomaiuri-dev/Reactive-Architecture?style=social
 [stars-url]: https://github.com/lorenzomaiuri-dev/Reactive-Architecture/stargazers
-[license-shield]: https://img.shields.io/badge/License-GPL%20v3-blue.svg
+[license-shield]: https://img.shields.io/badge/license-MIT-blue
 [license-url]: https://mit-license.org/license.txt
 [nuget-badge]: https://img.shields.io/nuget/v/CodiceFiscale.svg
 [nuget-url]: https://www.nuget.org/packages/CodiceFiscale/
